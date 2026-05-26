@@ -8,6 +8,8 @@
 
 <title>JP STORE</title>
 
+<meta name="description" content="JP STORE é uma loja digital especializada em Robux, YouTube Premium e Spotify Premium com entrega rápida, pagamentos via PIX, suporte no Discord e produtos oficiais com total segurança.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -39,7 +41,7 @@ width:500px;
 height:500px;
 background:#7c3aed;
 filter:blur(180px);
-opacity:.18;
+opacity:.15;
 top:-150px;
 left:-150px;
 z-index:-1;
@@ -51,7 +53,7 @@ top:0;
 left:0;
 width:100%;
 background:rgba(0,0,0,.92);
-backdrop-filter:blur(12px);
+backdrop-filter:blur(10px);
 border-bottom:1px solid rgba(255,255,255,.05);
 z-index:999;
 }
@@ -59,37 +61,24 @@ z-index:999;
 .topbar{
 max-width:1200px;
 margin:auto;
-padding:14px 20px;
+padding:12px 20px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:20px;
 flex-wrap:wrap;
+gap:20px;
 }
 
 .logo{
 display:flex;
 align-items:center;
-gap:15px;
 }
 
-.logo img{
-width:70px;
-height:70px;
-border-radius:50%;
-object-fit:cover;
-border:2px solid #9333ea;
-padding:4px;
-background:#111;
-box-shadow:0 0 25px rgba(147,51,234,.6);
-}
-
-.logo h1{
-font-size:28px;
-font-weight:800;
-background:linear-gradient(90deg,#a855f7,#60a5fa);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+.logo-img{
+width:90px;
+height:90px;
+object-fit:contain;
+filter:drop-shadow(0 0 25px #9333ea);
 }
 
 .menu{
@@ -144,7 +133,7 @@ font-weight:600;
 }
 
 .hero h2{
-font-size:78px;
+font-size:72px;
 line-height:1.05;
 font-weight:800;
 }
@@ -238,7 +227,7 @@ margin-bottom:20px;
 }
 
 .brand-top img{
-height:22px;
+height:24px;
 object-fit:contain;
 }
 
@@ -261,7 +250,6 @@ padding:25px 0;
 width:90px;
 height:90px;
 object-fit:contain;
-filter:drop-shadow(0 0 20px rgba(255,255,255,.12));
 }
 
 .card h3{
@@ -400,12 +388,6 @@ background:#090909;
 border-radius:22px;
 padding:25px;
 text-align:center;
-border:1px solid rgba(255,255,255,.05);
-}
-
-.qr-area h3{
-margin-bottom:20px;
-font-size:22px;
 }
 
 .pix-qr{
@@ -414,13 +396,6 @@ max-width:100%;
 border-radius:18px;
 background:white;
 padding:12px;
-box-shadow:0 0 30px rgba(168,85,247,.25);
-}
-
-.qr-area p{
-margin-top:15px;
-color:#bdbdbd;
-font-size:15px;
 }
 
 .copy-btn,
@@ -454,7 +429,6 @@ position:fixed;
 bottom:20px;
 left:20px;
 background:#111;
-border:1px solid rgba(168,85,247,.25);
 padding:18px 22px;
 border-radius:18px;
 font-weight:600;
@@ -478,7 +452,11 @@ color:#777;
 @media(max-width:900px){
 
 .hero h2{
-font-size:52px;
+font-size:50px;
+}
+
+.hero p{
+font-size:18px;
 }
 
 .section-title h2{
@@ -486,11 +464,12 @@ font-size:42px;
 }
 
 .category-title{
-font-size:32px;
+font-size:30px;
 }
 
-.hero p{
-font-size:18px;
+.logo-img{
+width:70px;
+height:70px;
 }
 
 }
@@ -506,11 +485,7 @@ font-size:18px;
 <div class="topbar">
 
 <div class="logo">
-
-<img src="./logo.png" alt="JP STORE">
-
-<h1>JP STORE</h1>
-
+<img src="logo.png" alt="JP STORE" class="logo-img">
 </div>
 
 <div class="menu">
@@ -589,7 +564,6 @@ Abrir Discord
 </div>
 
 <h3>80 Robux</h3>
-
 <div class="price">R$4</div>
 
 <p>Código oficial Microsoft/Xbox.</p>
@@ -612,7 +586,6 @@ Adicionar
 </div>
 
 <h3>400 Robux</h3>
-
 <div class="price">R$18</div>
 
 <p>Entrega rápida e segura.</p>
@@ -635,120 +608,11 @@ Adicionar
 </div>
 
 <h3>800 Robux</h3>
-
 <div class="price">R$35</div>
 
 <p>Resgate instantâneo.</p>
 
 <button onclick="addToCart('800 Robux','R$35')">
-Adicionar
-</button>
-
-</div>
-
-</div>
-
-<h2 class="category-title" style="color:#ff4d4d;">
-▶️ YouTube Premium Oficial
-</h2>
-
-<div class="products-grid">
-
-<div class="card">
-
-<div class="brand-top">
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
-<span>OFICIAL</span>
-</div>
-
-<div class="product-center">
-<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" class="icon-product">
-</div>
-
-<h3>2 Meses</h3>
-
-<div class="price">R$15</div>
-
-<p>Premium sem anúncios.</p>
-
-<button onclick="addToCart('YouTube Premium 2 Meses','R$15')">
-Adicionar
-</button>
-
-</div>
-
-<div class="card">
-
-<div class="brand-top">
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
-<span>OFICIAL</span>
-</div>
-
-<div class="product-center">
-<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" class="icon-product">
-</div>
-
-<h3>3 Meses</h3>
-
-<div class="price">R$20</div>
-
-<p>Vídeos sem anúncios.</p>
-
-<button onclick="addToCart('YouTube Premium 3 Meses','R$20')">
-Adicionar
-</button>
-
-</div>
-
-</div>
-
-<h2 class="category-title" style="color:#1ed760;">
-🎵 Spotify Premium Oficial
-</h2>
-
-<div class="products-grid">
-
-<div class="card">
-
-<div class="brand-top">
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg">
-<span>OFICIAL</span>
-</div>
-
-<div class="product-center">
-<img src="https://cdn-icons-png.flaticon.com/512/174/174872.png" class="icon-product">
-</div>
-
-<h3>1 Mês</h3>
-
-<div class="price">R$8</div>
-
-<p>Spotify Premium completo.</p>
-
-<button onclick="addToCart('Spotify Premium 1 Mês','R$8')">
-Adicionar
-</button>
-
-</div>
-
-<div class="card">
-
-<div class="brand-top">
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg">
-<span>OFICIAL</span>
-</div>
-
-<div class="product-center">
-<img src="https://cdn-icons-png.flaticon.com/512/174/174872.png" class="icon-product">
-</div>
-
-<h3>3 Meses</h3>
-
-<div class="price">R$18</div>
-
-<p>Plano premium garantido.</p>
-
-<button onclick="addToCart('Spotify Premium 3 Meses','R$18')">
 Adicionar
 </button>
 
@@ -766,17 +630,13 @@ Adicionar
 
 <div class="cart-box">
 
-<h2>
-Seu Carrinho
-</h2>
+<h2>Seu Carrinho</h2>
 
 <div id="cartItems"></div>
 
 <div class="cart-total">
 Total:
-<span id="cartTotal">
-R$0
-</span>
+<span id="cartTotal">R$0</span>
 </div>
 
 <div class="pix-key">
@@ -785,18 +645,10 @@ PIX: 24 98161-3211
 
 <div class="qr-area">
 
-<h3>
-Escaneie o QR Code
-</h3>
-
 <img
 src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=24981613211"
 class="pix-qr"
 >
-
-<p>
-Pagamento via PIX
-</p>
 
 </div>
 
@@ -816,18 +668,13 @@ Fechar
 
 </div>
 
-<div class="toast" id="toast">
-Toast
-</div>
+<div class="toast" id="toast"></div>
 
 <footer>
 © 2026 JP STORE
 </footer>
 
 <script>
-
-const WEBHOOK_URL =
-'https://discord.com/api/webhooks/1508879892794839172/3fDurhoASNgcNnqk0KmQDInJ1KUZIDtg1WGwOgXLxnit-C0MUpl3y7UNs3_XwUaS3vme';
 
 let cart = [];
 
@@ -846,38 +693,6 @@ toast.classList.remove('show');
 
 }
 
-async function sendLog(title,description,color){
-
-fetch(WEBHOOK_URL,{
-
-method:'POST',
-
-headers:{
-'Content-Type':'application/json'
-},
-
-body:JSON.stringify({
-
-embeds:[{
-
-title:title,
-description:description,
-color:color,
-
-footer:{
-text:'JP STORE Logs'
-},
-
-timestamp:new Date()
-
-}]
-
-})
-
-});
-
-}
-
 function addToCart(product,price){
 
 cart.push({
@@ -887,7 +702,7 @@ price
 
 updateCart();
 
-showToast(`🛒 ${product} adicionado`);
+showToast('🛒 Produto adicionado');
 
 }
 
@@ -910,8 +725,6 @@ price
 
 updateCart();
 
-showToast('➕ Quantidade aumentada');
-
 }
 
 function decreaseQuantity(index){
@@ -919,8 +732,6 @@ function decreaseQuantity(index){
 cart.splice(index,1);
 
 updateCart();
-
-showToast('➖ Quantidade diminuída');
 
 }
 
@@ -948,10 +759,8 @@ cartItems.innerHTML += `
 <div class="cart-item">
 
 <div>
-
 <h4>${item.product}</h4>
 <p>${item.price}</p>
-
 </div>
 
 <div class="cart-controls">
@@ -1012,42 +821,7 @@ showToast('✅ PIX copiado');
 
 function finishPurchase(){
 
-if(cart.length <= 0){
-
-showToast('⚠️ Carrinho vazio');
-return;
-
-}
-
-let products = '';
-
-cart.forEach(item=>{
-
-products +=
-`• ${item.product} - ${item.price}\n`;
-
-});
-
-const total =
-document.getElementById(
-'cartTotal'
-).innerText;
-
 showToast('🚀 Pedido enviado');
-
-sendLog(
-
-'📦 NOVO PEDIDO',
-
-`${products}
-
-💰 Total: ${total}
-
-🟡 Status: AGUARDANDO APROVAÇÃO`,
-
-10181046
-
-);
 
 setTimeout(()=>{
 
