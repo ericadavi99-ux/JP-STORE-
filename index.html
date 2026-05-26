@@ -8,7 +8,7 @@
 
 <title>JP STORE</title>
 
-<meta name="description" content="JP STORE é uma loja digital especializada em Robux, YouTube Premium e Spotify Premium com entrega rápida, pagamentos via PIX, suporte no Discord e produtos oficiais com total segurança.">
+<meta name="description" content="JP STORE é uma loja digital especializada em Robux, YouTube Premium e Spotify Premium com entrega rápida, pagamentos via PIX e suporte via Discord.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,14 +24,14 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
 body{
 background:#050505;
 color:white;
 overflow-x:hidden;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body::before{
@@ -39,10 +39,10 @@ content:'';
 position:fixed;
 width:500px;
 height:500px;
-background:#7c3aed;
+background:#9333ea;
 filter:blur(180px);
 opacity:.15;
-top:-150px;
+top:-200px;
 left:-150px;
 z-index:-1;
 }
@@ -61,7 +61,7 @@ z-index:999;
 .topbar{
 max-width:1200px;
 margin:auto;
-padding:12px 20px;
+padding:15px 20px;
 display:flex;
 align-items:center;
 justify-content:space-between;
@@ -69,16 +69,12 @@ flex-wrap:wrap;
 gap:20px;
 }
 
-.logo{
-display:flex;
-align-items:center;
-}
-
-.logo-img{
-width:90px;
-height:90px;
-object-fit:contain;
-filter:drop-shadow(0 0 25px #9333ea);
+.logo img{
+width:85px;
+height:85px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 0 25px #9333ea;
 }
 
 .menu{
@@ -101,8 +97,8 @@ color:#a855f7;
 
 .discord-btn{
 background:linear-gradient(90deg,#7c3aed,#9333ea);
-padding:14px 22px;
-border-radius:14px;
+padding:14px 24px;
+border-radius:15px;
 font-weight:700;
 text-decoration:none;
 color:white;
@@ -113,12 +109,12 @@ min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-padding:170px 20px 80px;
+padding:180px 20px 80px;
 text-align:center;
 }
 
 .hero-content{
-max-width:950px;
+max-width:900px;
 }
 
 .badge{
@@ -132,13 +128,13 @@ margin-bottom:30px;
 font-weight:600;
 }
 
-.hero h2{
-font-size:72px;
+.hero h1{
+font-size:75px;
 line-height:1.05;
 font-weight:800;
 }
 
-.hero h2 span{
+.hero h1 span{
 background:linear-gradient(90deg,#a855f7,#60a5fa);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
@@ -160,7 +156,7 @@ flex-wrap:wrap;
 }
 
 .hero-buttons a{
-padding:18px 34px;
+padding:18px 35px;
 border-radius:18px;
 font-size:18px;
 font-weight:700;
@@ -188,14 +184,7 @@ margin-bottom:70px;
 }
 
 .section-title h2{
-font-size:58px;
-font-weight:800;
-}
-
-.category-title{
-margin-top:70px;
-margin-bottom:30px;
-font-size:40px;
+font-size:55px;
 font-weight:800;
 }
 
@@ -206,7 +195,7 @@ gap:30px;
 }
 
 .card{
-background:linear-gradient(180deg,#111,#0a0a0a);
+background:linear-gradient(180deg,#111,#090909);
 padding:25px;
 border-radius:28px;
 border:1px solid rgba(255,255,255,.05);
@@ -216,22 +205,22 @@ overflow:hidden;
 
 .card:hover{
 transform:translateY(-8px);
-border-color:#7c3aed;
+border-color:#9333ea;
 }
 
-.brand-top{
+.card-top{
 display:flex;
-align-items:center;
 justify-content:space-between;
+align-items:center;
 margin-bottom:20px;
 }
 
-.brand-top img{
-height:24px;
+.card-top img{
+height:28px;
 object-fit:contain;
 }
 
-.brand-top span{
+.tag{
 background:#16a34a;
 padding:6px 12px;
 border-radius:999px;
@@ -239,26 +228,26 @@ font-size:12px;
 font-weight:700;
 }
 
-.product-center{
+.product-image{
 display:flex;
 justify-content:center;
 align-items:center;
 padding:25px 0;
 }
 
-.icon-product{
+.product-image img{
 width:90px;
 height:90px;
 object-fit:contain;
 }
 
 .card h3{
-margin-top:10px;
 font-size:30px;
+margin-top:15px;
 }
 
 .price{
-margin-top:14px;
+margin-top:12px;
 font-size:24px;
 font-weight:700;
 color:#c084fc;
@@ -271,14 +260,67 @@ color:#bdbdbd;
 }
 
 .card button{
-margin-top:24px;
+margin-top:22px;
 width:100%;
 padding:18px;
 border:none;
 border-radius:18px;
 background:linear-gradient(90deg,#7c3aed,#9333ea);
 color:white;
-font-size:18px;
+font-size:17px;
+font-weight:700;
+cursor:pointer;
+}
+
+.feedback-area{
+padding:100px 8%;
+}
+
+.feedback-box{
+max-width:700px;
+margin:auto;
+background:#0d0d0d;
+padding:35px;
+border-radius:28px;
+border:1px solid rgba(255,255,255,.05);
+}
+
+.feedback-box h2{
+font-size:38px;
+margin-bottom:20px;
+}
+
+.feedback-box p{
+color:#bdbdbd;
+line-height:1.8;
+margin-bottom:25px;
+}
+
+.feedback-box input,
+.feedback-box textarea{
+width:100%;
+padding:18px;
+background:#111;
+border:none;
+border-radius:16px;
+margin-bottom:20px;
+color:white;
+font-size:16px;
+}
+
+.feedback-box textarea{
+resize:none;
+height:140px;
+}
+
+.feedback-box button{
+width:100%;
+padding:18px;
+border:none;
+border-radius:16px;
+background:linear-gradient(90deg,#7c3aed,#9333ea);
+color:white;
+font-size:17px;
 font-weight:700;
 cursor:pointer;
 }
@@ -288,8 +330,8 @@ position:fixed;
 bottom:20px;
 right:20px;
 background:linear-gradient(90deg,#7c3aed,#9333ea);
+padding:18px 25px;
 border:none;
-padding:18px 24px;
 border-radius:999px;
 color:white;
 font-weight:700;
@@ -300,13 +342,12 @@ z-index:999;
 .cart-overlay{
 position:fixed;
 inset:0;
-background:rgba(0,0,0,.88);
+background:rgba(0,0,0,.9);
 display:none;
 justify-content:center;
 align-items:center;
 padding:20px;
 z-index:99999;
-backdrop-filter:blur(8px);
 }
 
 .cart-box{
@@ -315,7 +356,6 @@ max-width:520px;
 background:#0d0d0d;
 padding:35px;
 border-radius:28px;
-border:1px solid rgba(168,85,247,.15);
 max-height:90vh;
 overflow:auto;
 }
@@ -327,20 +367,18 @@ align-items:center;
 padding:18px;
 margin-top:15px;
 background:#111;
-border-radius:16px;
-gap:10px;
+border-radius:18px;
 }
 
-.cart-controls{
+.quantity{
 display:flex;
 align-items:center;
 gap:10px;
 }
 
-.plus-btn,
-.minus-btn{
-width:40px;
-height:40px;
+.quantity button{
+width:38px;
+height:38px;
 border:none;
 border-radius:12px;
 font-size:20px;
@@ -349,22 +387,12 @@ cursor:pointer;
 color:white;
 }
 
-.plus-btn{
+.plus{
 background:#16a34a;
 }
 
-.minus-btn{
+.minus{
 background:#dc2626;
-}
-
-.remove-btn{
-background:#444;
-border:none;
-width:40px;
-height:40px;
-border-radius:12px;
-color:white;
-cursor:pointer;
 }
 
 .cart-total{
@@ -373,35 +401,29 @@ font-size:24px;
 font-weight:700;
 }
 
-.pix-key{
+.pix-box{
 margin-top:20px;
 background:#090909;
 padding:18px;
-border-radius:14px;
+border-radius:16px;
+text-align:center;
 word-break:break-all;
-text-align:center;
-}
-
-.qr-area{
-margin-top:25px;
-background:#090909;
-border-radius:22px;
-padding:25px;
-text-align:center;
 }
 
 .pix-qr{
-width:260px;
-max-width:100%;
-border-radius:18px;
-background:white;
-padding:12px;
+margin-top:20px;
+text-align:center;
 }
 
-.copy-btn,
-.pay-btn,
-.close-btn{
-margin-top:16px;
+.pix-qr img{
+width:240px;
+background:white;
+padding:10px;
+border-radius:18px;
+}
+
+.cart-box button.action{
+margin-top:18px;
 width:100%;
 padding:18px;
 border:none;
@@ -413,7 +435,7 @@ color:white;
 }
 
 .copy-btn{
-background:#1d1d1d;
+background:#181818;
 }
 
 .pay-btn{
@@ -421,7 +443,7 @@ background:linear-gradient(90deg,#7c3aed,#9333ea);
 }
 
 .close-btn{
-background:#181818;
+background:#222;
 }
 
 .toast{
@@ -444,15 +466,15 @@ opacity:1;
 }
 
 footer{
-padding:45px 20px;
+padding:40px 20px;
 text-align:center;
 color:#777;
 }
 
 @media(max-width:900px){
 
-.hero h2{
-font-size:50px;
+.hero h1{
+font-size:52px;
 }
 
 .hero p{
@@ -463,11 +485,7 @@ font-size:18px;
 font-size:42px;
 }
 
-.category-title{
-font-size:30px;
-}
-
-.logo-img{
+.logo img{
 width:70px;
 height:70px;
 }
@@ -485,13 +503,14 @@ height:70px;
 <div class="topbar">
 
 <div class="logo">
-<img src="logo.png" alt="JP STORE" class="logo-img">
+<img src="logo.png" alt="JP STORE">
 </div>
 
 <div class="menu">
 
 <a href="#">Início</a>
 <a href="#produtos">Produtos</a>
+<a href="#feedback">Feedback</a>
 
 <a href="https://discord.gg/xrSpfWSby" target="_blank">
 Discord
@@ -512,16 +531,16 @@ Entrar no Discord
 <div class="hero-content">
 
 <div class="badge">
-🚀 LOJA OFICIAL
+🚀 ASSINATURAS OFICIAIS
 </div>
 
-<h2>
+<h1>
 Assinaturas digitais
 <span>oficiais</span>
-</h2>
+</h1>
 
 <p>
-Robux, YouTube Premium e Spotify Premium com entrega rápida e suporte completo.
+Robux, YouTube Premium e Spotify Premium com entrega rápida, pagamentos via PIX e suporte completo.
 </p>
 
 <div class="hero-buttons">
@@ -546,29 +565,30 @@ Abrir Discord
 <h2>Produtos</h2>
 </div>
 
-<h2 class="category-title" style="color:#c084fc;">
-💎 Robux Oficial
-</h2>
-
 <div class="products-grid">
 
 <div class="card">
 
-<div class="brand-top">
+<div class="card-top">
 <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg">
-<span>OFICIAL</span>
+<div class="tag">OFICIAL</div>
 </div>
 
-<div class="product-center">
-<img src="https://cdn-icons-png.flaticon.com/512/5968/5968678.png" class="icon-product">
+<div class="product-image">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968678.png">
 </div>
 
 <h3>80 Robux</h3>
-<div class="price">R$4</div>
 
-<p>Código oficial Microsoft/Xbox.</p>
+<div class="price">
+R$4
+</div>
 
-<button onclick="addToCart('80 Robux','R$4')">
+<p>
+Código oficial Microsoft/Xbox com entrega rápida.
+</p>
+
+<button onclick="addToCart('80 Robux',4)">
 Adicionar
 </button>
 
@@ -576,21 +596,26 @@ Adicionar
 
 <div class="card">
 
-<div class="brand-top">
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg">
-<span>OFICIAL</span>
+<div class="card-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png">
+<div class="tag">OFICIAL</div>
 </div>
 
-<div class="product-center">
-<img src="https://cdn-icons-png.flaticon.com/512/5968/5968678.png" class="icon-product">
+<div class="product-image">
+<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
 </div>
 
-<h3>400 Robux</h3>
-<div class="price">R$18</div>
+<h3>YouTube Premium</h3>
 
-<p>Entrega rápida e segura.</p>
+<div class="price">
+R$15
+</div>
 
-<button onclick="addToCart('400 Robux','R$18')">
+<p>
+2 meses de YouTube Premium oficial.
+</p>
+
+<button onclick="addToCart('YouTube Premium',15)">
 Adicionar
 </button>
 
@@ -598,25 +623,53 @@ Adicionar
 
 <div class="card">
 
-<div class="brand-top">
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg">
-<span>OFICIAL</span>
+<div class="card-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg">
+<div class="tag">OFICIAL</div>
 </div>
 
-<div class="product-center">
-<img src="https://cdn-icons-png.flaticon.com/512/5968/5968678.png" class="icon-product">
+<div class="product-image">
+<img src="https://cdn-icons-png.flaticon.com/512/174/174872.png">
 </div>
 
-<h3>800 Robux</h3>
-<div class="price">R$35</div>
+<h3>Spotify Premium</h3>
 
-<p>Resgate instantâneo.</p>
+<div class="price">
+R$8
+</div>
 
-<button onclick="addToCart('800 Robux','R$35')">
+<p>
+1 mês de Spotify Premium oficial.
+</p>
+
+<button onclick="addToCart('Spotify Premium',8)">
 Adicionar
 </button>
 
 </div>
+
+</div>
+
+</section>
+
+<section class="feedback-area" id="feedback">
+
+<div class="feedback-box">
+
+<h2>Feedback</h2>
+
+<p>
+Somente clientes que compraram na JP STORE podem enviar feedback.
+Digite o ID do pedido recebido no Discord após a compra.
+</p>
+
+<input type="text" id="pedidoID" placeholder="ID do pedido">
+
+<textarea id="feedbackText" placeholder="Digite seu feedback..."></textarea>
+
+<button onclick="sendFeedback()">
+Enviar Feedback
+</button>
 
 </div>
 
@@ -636,31 +689,30 @@ Adicionar
 
 <div class="cart-total">
 Total:
-<span id="cartTotal">R$0</span>
+<span id="total">
+R$0
+</span>
 </div>
 
-<div class="pix-key">
+<div class="pix-box">
 PIX: 24 98161-3211
 </div>
 
-<div class="qr-area">
+<div class="pix-qr">
 
-<img
-src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=24981613211"
-class="pix-qr"
->
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=24981613211">
 
 </div>
 
-<button class="copy-btn" onclick="copyPix()">
+<button class="action copy-btn" onclick="copyPix()">
 Copiar PIX
 </button>
 
-<button class="pay-btn" onclick="finishPurchase()">
+<button class="action pay-btn" onclick="finishPurchase()">
 Já Paguei
 </button>
 
-<button class="close-btn" onclick="closeCart()">
+<button class="action close-btn" onclick="closeCart()">
 Fechar
 </button>
 
@@ -677,6 +729,7 @@ Fechar
 <script>
 
 let cart = [];
+let purchaseIDs = [];
 
 function showToast(message){
 
@@ -706,42 +759,13 @@ showToast('🛒 Produto adicionado');
 
 }
 
-function removeItem(index){
-
-cart.splice(index,1);
-
-updateCart();
-
-showToast('❌ Produto removido');
-
-}
-
-function increaseQuantity(product,price){
-
-cart.push({
-product,
-price
-});
-
-updateCart();
-
-}
-
-function decreaseQuantity(index){
-
-cart.splice(index,1);
-
-updateCart();
-
-}
-
 function updateCart(){
 
 const cartItems =
 document.getElementById('cartItems');
 
 const totalBox =
-document.getElementById('cartTotal');
+document.getElementById('total');
 
 cartItems.innerHTML='';
 
@@ -749,10 +773,7 @@ let total = 0;
 
 cart.forEach((item,index)=>{
 
-const numericPrice =
-parseFloat(item.price.replace('R$',''));
-
-total += numericPrice;
+total += item.price;
 
 cartItems.innerHTML += `
 
@@ -760,24 +781,19 @@ cartItems.innerHTML += `
 
 <div>
 <h4>${item.product}</h4>
-<p>${item.price}</p>
+<p>R$${item.price}</p>
 </div>
 
-<div class="cart-controls">
+<div class="quantity">
 
-<button class="minus-btn"
-onclick="decreaseQuantity(${index})">
+<button class="minus"
+onclick="removeOne(${index})">
 -
 </button>
 
-<button class="plus-btn"
-onclick="increaseQuantity('${item.product}','${item.price}')">
+<button class="plus"
+onclick="addToCart('${item.product}',${item.price})">
 +
-</button>
-
-<button class="remove-btn"
-onclick="removeItem(${index})">
-✖
 </button>
 
 </div>
@@ -790,6 +806,14 @@ onclick="removeItem(${index})">
 
 totalBox.innerHTML =
 'R$' + total.toFixed(2);
+
+}
+
+function removeOne(index){
+
+cart.splice(index,1);
+
+updateCart();
 
 }
 
@@ -821,16 +845,65 @@ showToast('✅ PIX copiado');
 
 function finishPurchase(){
 
-showToast('🚀 Pedido enviado');
+const orderID =
+'JP' + Math.floor(Math.random()*999999);
 
-setTimeout(()=>{
+purchaseIDs.push(orderID);
+
+showToast(
+'✅ Pedido enviado | ID: ' + orderID
+);
 
 window.open(
 'https://discord.gg/xrSpfWSby',
 '_blank'
 );
 
-},1200);
+}
+
+function sendFeedback(){
+
+const id =
+document.getElementById(
+'pedidoID'
+).value;
+
+const text =
+document.getElementById(
+'feedbackText'
+).value;
+
+if(!purchaseIDs.includes(id)){
+
+showToast(
+'❌ Apenas clientes podem enviar feedback'
+);
+
+return;
+
+}
+
+if(text.length < 5){
+
+showToast(
+'❌ Digite um feedback válido'
+);
+
+return;
+
+}
+
+showToast(
+'✅ Feedback enviado com sucesso'
+);
+
+document.getElementById(
+'feedbackText'
+).value='';
+
+document.getElementById(
+'pedidoID'
+).value='';
 
 }
 
