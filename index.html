@@ -8,7 +8,7 @@
 
 <title>JP STORE</title>
 
-<meta name="description" content="JP STORE é uma loja digital especializada em Robux, YouTube Premium e Spotify Premium com entrega rápida, pagamentos via PIX e suporte via Discord.">
+<meta name="description" content="JP STORE - Loja digital de Robux, YouTube Premium e Spotify Premium com entrega rápida e pagamentos via PIX.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,19 +61,19 @@ z-index:999;
 .topbar{
 max-width:1200px;
 margin:auto;
-padding:14px 20px;
+padding:15px 20px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:20px;
 flex-wrap:wrap;
+gap:20px;
 }
 
 .logo img{
 width:85px;
 height:85px;
-object-fit:cover;
 border-radius:20px;
+object-fit:cover;
 box-shadow:0 0 25px #9333ea;
 }
 
@@ -109,12 +109,12 @@ min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-padding:180px 20px 80px;
+padding:180px 20px 100px;
 text-align:center;
 }
 
 .hero-content{
-max-width:900px;
+max-width:950px;
 }
 
 .badge{
@@ -129,7 +129,7 @@ font-weight:600;
 }
 
 .hero h1{
-font-size:75px;
+font-size:78px;
 line-height:1.05;
 font-weight:800;
 }
@@ -143,35 +143,26 @@ background:linear-gradient(90deg,#a855f7,#60a5fa);
 .hero p{
 margin-top:25px;
 font-size:22px;
-line-height:1.8;
+line-height:1.9;
 color:#bdbdbd;
 }
 
-.hero-buttons{
-margin-top:45px;
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.hero-buttons a{
-padding:18px 35px;
-border-radius:18px;
-font-size:18px;
-font-weight:700;
-text-decoration:none;
-}
-
-.primary-btn{
+.buy-btn{
+margin-top:50px;
+display:inline-block;
+padding:22px 50px;
 background:linear-gradient(90deg,#7c3aed,#9333ea);
+border-radius:22px;
+font-size:22px;
+font-weight:700;
 color:white;
+text-decoration:none;
+box-shadow:0 0 30px rgba(147,51,234,.4);
+transition:.3s;
 }
 
-.secondary-btn{
-background:#111;
-border:1px solid rgba(255,255,255,.06);
-color:white;
+.buy-btn:hover{
+transform:scale(1.05);
 }
 
 .products{
@@ -190,17 +181,18 @@ font-weight:800;
 
 .products-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:30px;
 }
 
 .card{
 background:linear-gradient(180deg,#111,#090909);
-padding:25px;
-border-radius:28px;
+padding:28px;
+border-radius:30px;
 border:1px solid rgba(255,255,255,.05);
 transition:.3s;
 overflow:hidden;
+position:relative;
 }
 
 .card:hover{
@@ -208,72 +200,68 @@ transform:translateY(-8px);
 border-color:#9333ea;
 }
 
-.card-top{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:20px;
-}
-
-.card-top img{
-height:28px;
-object-fit:contain;
-}
-
-.tag{
+.plan-badge{
+position:absolute;
+top:18px;
+right:18px;
 background:#16a34a;
-padding:6px 12px;
+padding:8px 14px;
 border-radius:999px;
 font-size:12px;
 font-weight:700;
 }
 
-.product-image{
+.product-logo{
 display:flex;
 justify-content:center;
 align-items:center;
-padding:25px 0;
+padding:30px 0;
 }
 
-.product-image img{
-width:90px;
-height:90px;
+.product-logo img{
+width:100px;
+height:100px;
 object-fit:contain;
 }
 
 .card h3{
-font-size:30px;
-margin-top:15px;
+font-size:34px;
+margin-top:10px;
+}
+
+.card .plan{
+margin-top:10px;
+color:#bdbdbd;
+font-size:17px;
 }
 
 .price{
-margin-top:12px;
-font-size:24px;
-font-weight:700;
+margin-top:20px;
+font-size:36px;
+font-weight:800;
 color:#c084fc;
 }
 
-.card p{
-margin-top:12px;
-line-height:1.7;
-color:#bdbdbd;
-}
-
 .card button{
-margin-top:22px;
+margin-top:25px;
 width:100%;
 padding:18px;
 border:none;
 border-radius:18px;
 background:linear-gradient(90deg,#7c3aed,#9333ea);
 color:white;
-font-size:17px;
+font-size:18px;
 font-weight:700;
 cursor:pointer;
+transition:.3s;
+}
+
+.card button:hover{
+transform:scale(1.03);
 }
 
 footer{
-padding:40px 20px;
+padding:45px 20px;
 text-align:center;
 color:#777;
 }
@@ -281,7 +269,7 @@ color:#777;
 @media(max-width:900px){
 
 .hero h1{
-font-size:52px;
+font-size:54px;
 }
 
 .hero p{
@@ -341,25 +329,23 @@ Entrar no Discord
 </div>
 
 <h1>
-Assinaturas digitais
-<span>oficiais</span>
+A melhor loja de
+<span>assinaturas digitais</span>
 </h1>
 
 <p>
-Robux, YouTube Premium e Spotify Premium com entrega rápida, pagamentos via PIX e suporte completo.
+
+A JP STORE é uma loja especializada em Robux, YouTube Premium e Spotify Premium com entrega rápida e pagamentos via PIX.
+
+Nossa missão é entregar assinaturas digitais com segurança, praticidade e suporte completo para todos os clientes.
+
+Produtos oficiais, preços acessíveis e atendimento rápido diretamente pelo Discord.
+
 </p>
 
-<div class="hero-buttons">
-
-<a href="#produtos" class="primary-btn">
+<a href="#produtos" class="buy-btn">
 Comprar Agora
 </a>
-
-<a href="https://discord.gg/xrSpfWSby" target="_blank" class="secondary-btn">
-Abrir Discord
-</a>
-
-</div>
 
 </div>
 
@@ -368,196 +354,203 @@ Abrir Discord
 <section class="products" id="produtos">
 
 <div class="section-title">
-<h2>Produtos</h2>
+<h2>Escolha seu plano</h2>
 </div>
 
 <div class="products-grid">
 
+<!-- ROBUX 80 -->
+
 <div class="card">
 
-<div class="card-top">
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg">
-<div class="tag">OFICIAL</div>
+<div class="plan-badge">
+OFICIAL
 </div>
 
-<div class="product-image">
+<div class="product-logo">
 <img src="https://cdn-icons-png.flaticon.com/512/5968/5968678.png">
 </div>
 
 <h3>80 Robux</h3>
 
+<div class="plan">
+Pacote oficial Microsoft/Xbox
+</div>
+
 <div class="price">
 R$4
 </div>
 
-<p>
-Código oficial Microsoft/Xbox.
-</p>
-
 <button>
-Comprar
+Comprar Agora
 </button>
 
 </div>
 
+<!-- ROBUX 400 -->
+
 <div class="card">
 
-<div class="card-top">
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg">
-<div class="tag">OFICIAL</div>
+<div class="plan-badge">
+OFICIAL
 </div>
 
-<div class="product-image">
+<div class="product-logo">
 <img src="https://cdn-icons-png.flaticon.com/512/5968/5968678.png">
 </div>
 
 <h3>400 Robux</h3>
 
+<div class="plan">
+Entrega rápida e segura
+</div>
+
 <div class="price">
 R$18
 </div>
 
-<p>
-Entrega rápida e segura.
-</p>
-
 <button>
-Comprar
+Comprar Agora
 </button>
 
 </div>
 
+<!-- ROBUX 800 -->
+
 <div class="card">
 
-<div class="card-top">
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg">
-<div class="tag">OFICIAL</div>
+<div class="plan-badge">
+OFICIAL
 </div>
 
-<div class="product-image">
+<div class="product-logo">
 <img src="https://cdn-icons-png.flaticon.com/512/5968/5968678.png">
 </div>
 
 <h3>800 Robux</h3>
 
+<div class="plan">
+Resgate oficial Microsoft/Xbox
+</div>
+
 <div class="price">
 R$35
 </div>
 
-<p>
-Resgate oficial Microsoft/Xbox.
-</p>
-
 <button>
-Comprar
+Comprar Agora
 </button>
 
 </div>
 
+<!-- YOUTUBE 2M -->
+
 <div class="card">
 
-<div class="card-top">
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png">
-<div class="tag">OFICIAL</div>
+<div class="plan-badge">
+PREMIUM
 </div>
 
-<div class="product-image">
+<div class="product-logo">
 <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
 </div>
 
 <h3>YouTube Premium</h3>
 
+<div class="plan">
+Plano de 2 meses
+</div>
+
 <div class="price">
 R$15
 </div>
 
-<p>
-2 meses de YouTube Premium oficial.
-</p>
-
 <button>
-Comprar
+Comprar Agora
 </button>
 
 </div>
 
+<!-- YOUTUBE 3M -->
+
 <div class="card">
 
-<div class="card-top">
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png">
-<div class="tag">OFICIAL</div>
+<div class="plan-badge">
+PREMIUM
 </div>
 
-<div class="product-image">
+<div class="product-logo">
 <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
 </div>
 
-<h3>YouTube Premium 3M</h3>
+<h3>YouTube Premium</h3>
+
+<div class="plan">
+Plano de 3 meses
+</div>
 
 <div class="price">
 R$20
 </div>
 
-<p>
-3 meses de assinatura Premium.
-</p>
-
 <button>
-Comprar
+Comprar Agora
 </button>
 
 </div>
 
+<!-- SPOTIFY 1M -->
+
 <div class="card">
 
-<div class="card-top">
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg">
-<div class="tag">OFICIAL</div>
+<div class="plan-badge">
+PREMIUM
 </div>
 
-<div class="product-image">
+<div class="product-logo">
 <img src="https://cdn-icons-png.flaticon.com/512/174/174872.png">
 </div>
 
 <h3>Spotify Premium</h3>
 
+<div class="plan">
+Plano de 1 mês
+</div>
+
 <div class="price">
 R$8
 </div>
 
-<p>
-1 mês de Spotify Premium oficial.
-</p>
-
 <button>
-Comprar
+Comprar Agora
 </button>
 
 </div>
 
+<!-- SPOTIFY 3M -->
+
 <div class="card">
 
-<div class="card-top">
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg">
-<div class="tag">OFICIAL</div>
+<div class="plan-badge">
+PREMIUM
 </div>
 
-<div class="product-image">
+<div class="product-logo">
 <img src="https://cdn-icons-png.flaticon.com/512/174/174872.png">
 </div>
 
-<h3>Spotify Premium 3M</h3>
+<h3>Spotify Premium</h3>
+
+<div class="plan">
+Plano de 3 meses
+</div>
 
 <div class="price">
 R$18
 </div>
 
-<p>
-3 meses de Spotify Premium oficial.
-</p>
-
 <button>
-Comprar
+Comprar Agora
 </button>
 
 </div>
@@ -567,7 +560,9 @@ Comprar
 </section>
 
 <footer>
-© 2026 JP STORE
+
+© 2026 JP STORE — Todos os direitos reservados
+
 </footer>
 
 </body>
