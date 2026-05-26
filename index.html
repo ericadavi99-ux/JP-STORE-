@@ -24,14 +24,14 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 background:#050505;
 color:white;
 overflow-x:hidden;
-}
-
-html{
-scroll-behavior:smooth;
 }
 
 body::before{
@@ -61,12 +61,12 @@ z-index:999;
 .topbar{
 max-width:1200px;
 margin:auto;
-padding:15px 20px;
+padding:14px 20px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-flex-wrap:wrap;
 gap:20px;
+flex-wrap:wrap;
 }
 
 .logo img{
@@ -503,7 +503,9 @@ height:70px;
 <div class="topbar">
 
 <div class="logo">
-<img src="logo.png" alt="JP STORE">
+
+<img src="https://i.imgur.com/0QKXKpS.png" alt="JP STORE">
+
 </div>
 
 <div class="menu">
@@ -559,355 +561,9 @@ Abrir Discord
 
 </section>
 
-<section class="products" id="produtos">
-
-<div class="section-title">
-<h2>Produtos</h2>
-</div>
-
-<div class="products-grid">
-
-<div class="card">
-
-<div class="card-top">
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg">
-<div class="tag">OFICIAL</div>
-</div>
-
-<div class="product-image">
-<img src="https://cdn-icons-png.flaticon.com/512/5968/5968678.png">
-</div>
-
-<h3>80 Robux</h3>
-
-<div class="price">
-R$4
-</div>
-
-<p>
-Código oficial Microsoft/Xbox com entrega rápida.
-</p>
-
-<button onclick="addToCart('80 Robux',4)">
-Adicionar
-</button>
-
-</div>
-
-<div class="card">
-
-<div class="card-top">
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png">
-<div class="tag">OFICIAL</div>
-</div>
-
-<div class="product-image">
-<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
-</div>
-
-<h3>YouTube Premium</h3>
-
-<div class="price">
-R$15
-</div>
-
-<p>
-2 meses de YouTube Premium oficial.
-</p>
-
-<button onclick="addToCart('YouTube Premium',15)">
-Adicionar
-</button>
-
-</div>
-
-<div class="card">
-
-<div class="card-top">
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg">
-<div class="tag">OFICIAL</div>
-</div>
-
-<div class="product-image">
-<img src="https://cdn-icons-png.flaticon.com/512/174/174872.png">
-</div>
-
-<h3>Spotify Premium</h3>
-
-<div class="price">
-R$8
-</div>
-
-<p>
-1 mês de Spotify Premium oficial.
-</p>
-
-<button onclick="addToCart('Spotify Premium',8)">
-Adicionar
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="feedback-area" id="feedback">
-
-<div class="feedback-box">
-
-<h2>Feedback</h2>
-
-<p>
-Somente clientes que compraram na JP STORE podem enviar feedback.
-Digite o ID do pedido recebido no Discord após a compra.
-</p>
-
-<input type="text" id="pedidoID" placeholder="ID do pedido">
-
-<textarea id="feedbackText" placeholder="Digite seu feedback..."></textarea>
-
-<button onclick="sendFeedback()">
-Enviar Feedback
-</button>
-
-</div>
-
-</section>
-
-<button class="cart-button" onclick="openCart()">
-🛒 Carrinho
-</button>
-
-<div class="cart-overlay" id="cartOverlay">
-
-<div class="cart-box">
-
-<h2>Seu Carrinho</h2>
-
-<div id="cartItems"></div>
-
-<div class="cart-total">
-Total:
-<span id="total">
-R$0
-</span>
-</div>
-
-<div class="pix-box">
-PIX: 24 98161-3211
-</div>
-
-<div class="pix-qr">
-
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=24981613211">
-
-</div>
-
-<button class="action copy-btn" onclick="copyPix()">
-Copiar PIX
-</button>
-
-<button class="action pay-btn" onclick="finishPurchase()">
-Já Paguei
-</button>
-
-<button class="action close-btn" onclick="closeCart()">
-Fechar
-</button>
-
-</div>
-
-</div>
-
-<div class="toast" id="toast"></div>
-
 <footer>
 © 2026 JP STORE
 </footer>
-
-<script>
-
-let cart = [];
-let purchaseIDs = [];
-
-function showToast(message){
-
-const toast =
-document.getElementById('toast');
-
-toast.innerHTML = message;
-
-toast.classList.add('show');
-
-setTimeout(()=>{
-toast.classList.remove('show');
-},3000);
-
-}
-
-function addToCart(product,price){
-
-cart.push({
-product,
-price
-});
-
-updateCart();
-
-showToast('🛒 Produto adicionado');
-
-}
-
-function updateCart(){
-
-const cartItems =
-document.getElementById('cartItems');
-
-const totalBox =
-document.getElementById('total');
-
-cartItems.innerHTML='';
-
-let total = 0;
-
-cart.forEach((item,index)=>{
-
-total += item.price;
-
-cartItems.innerHTML += `
-
-<div class="cart-item">
-
-<div>
-<h4>${item.product}</h4>
-<p>R$${item.price}</p>
-</div>
-
-<div class="quantity">
-
-<button class="minus"
-onclick="removeOne(${index})">
--
-</button>
-
-<button class="plus"
-onclick="addToCart('${item.product}',${item.price})">
-+
-</button>
-
-</div>
-
-</div>
-
-`;
-
-});
-
-totalBox.innerHTML =
-'R$' + total.toFixed(2);
-
-}
-
-function removeOne(index){
-
-cart.splice(index,1);
-
-updateCart();
-
-}
-
-function openCart(){
-
-document.getElementById(
-'cartOverlay'
-).style.display='flex';
-
-}
-
-function closeCart(){
-
-document.getElementById(
-'cartOverlay'
-).style.display='none';
-
-}
-
-function copyPix(){
-
-navigator.clipboard.writeText(
-'24 98161-3211'
-);
-
-showToast('✅ PIX copiado');
-
-}
-
-function finishPurchase(){
-
-const orderID =
-'JP' + Math.floor(Math.random()*999999);
-
-purchaseIDs.push(orderID);
-
-showToast(
-'✅ Pedido enviado | ID: ' + orderID
-);
-
-window.open(
-'https://discord.gg/xrSpfWSby',
-'_blank'
-);
-
-}
-
-function sendFeedback(){
-
-const id =
-document.getElementById(
-'pedidoID'
-).value;
-
-const text =
-document.getElementById(
-'feedbackText'
-).value;
-
-if(!purchaseIDs.includes(id)){
-
-showToast(
-'❌ Apenas clientes podem enviar feedback'
-);
-
-return;
-
-}
-
-if(text.length < 5){
-
-showToast(
-'❌ Digite um feedback válido'
-);
-
-return;
-
-}
-
-showToast(
-'✅ Feedback enviado com sucesso'
-);
-
-document.getElementById(
-'feedbackText'
-).value='';
-
-document.getElementById(
-'pedidoID'
-).value='';
-
-}
-
-</script>
 
 </body>
 </html>
