@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 
 <meta charset="UTF-8">
@@ -104,15 +103,6 @@ transition:.3s;
 color:#a855f7;
 }
 
-.discord-btn{
-padding:14px 24px;
-border-radius:16px;
-background:linear-gradient(90deg,#7c3aed,#9333ea);
-color:white;
-font-weight:700;
-text-decoration:none;
-}
-
 .hero{
 min-height:100vh;
 display:flex;
@@ -167,11 +157,6 @@ color:white;
 font-size:22px;
 font-weight:700;
 box-shadow:0 0 35px rgba(147,51,234,.4);
-transition:.3s;
-}
-
-.buy-btn:hover{
-transform:scale(1.05);
 }
 
 .products{
@@ -199,14 +184,7 @@ background:linear-gradient(180deg,#111,#090909);
 padding:30px;
 border-radius:30px;
 border:1px solid rgba(255,255,255,.05);
-transition:.3s;
 position:relative;
-overflow:hidden;
-}
-
-.card:hover{
-transform:translateY(-8px);
-border-color:#9333ea;
 }
 
 .plan-badge{
@@ -262,11 +240,75 @@ color:white;
 font-size:18px;
 font-weight:700;
 cursor:pointer;
-transition:.3s;
 }
 
-.card button:hover{
-transform:scale(1.03);
+.auth-section{
+padding:100px 8%;
+}
+
+.auth-box{
+max-width:600px;
+margin:auto;
+background:#0d0d0d;
+padding:40px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,.05);
+}
+
+.auth-box h2{
+font-size:42px;
+margin-bottom:25px;
+text-align:center;
+}
+
+.auth-box input{
+width:100%;
+padding:18px;
+border:none;
+border-radius:16px;
+background:#111;
+margin-bottom:20px;
+color:white;
+font-size:16px;
+}
+
+.auth-box button{
+width:100%;
+padding:18px;
+border:none;
+border-radius:18px;
+background:linear-gradient(90deg,#7c3aed,#9333ea);
+color:white;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+}
+
+.feedbacks{
+padding:100px 8%;
+}
+
+.feedback-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.feedback-card{
+background:#111;
+padding:30px;
+border-radius:25px;
+border:1px solid rgba(255,255,255,.05);
+}
+
+.feedback-card h3{
+font-size:24px;
+margin-bottom:15px;
+}
+
+.feedback-card p{
+color:#bdbdbd;
+line-height:1.8;
 }
 
 footer{
@@ -318,16 +360,10 @@ height:65px;
 
 <a href="#">Início</a>
 <a href="#produtos">Produtos</a>
-
-<a href="https://discord.gg/xrSpfWSby" target="_blank">
-Discord
-</a>
+<a href="#login">Login</a>
+<a href="#feedbacks">Feedbacks</a>
 
 </div>
-
-<a href="https://discord.gg/xrSpfWSby" target="_blank" class="discord-btn">
-Entrar no Discord
-</a>
 
 </div>
 
@@ -348,11 +384,9 @@ A melhor loja de
 
 <p>
 
-A JP STORE é uma loja especializada em Robux, YouTube Premium e Spotify Premium com entrega rápida, pagamentos via PIX e suporte completo.
+A JP STORE é especializada em Robux, YouTube Premium e Spotify Premium com entrega rápida, pagamentos via PIX e suporte completo.
 
-Nosso objetivo é oferecer produtos digitais com segurança, praticidade e confiança para todos os clientes.
-
-Produtos oficiais, atendimento rápido e preços acessíveis.
+Produtos digitais oficiais com segurança, praticidade e atendimento rápido.
 
 </p>
 
@@ -372,13 +406,8 @@ Comprar Agora
 
 <div class="products-grid">
 
-<!-- ROBUX 80 -->
-
 <div class="card">
-
-<div class="plan-badge">
-OFICIAL
-</div>
+<div class="plan-badge">OFICIAL</div>
 
 <div class="product-logo">
 <img src="https://cdn-icons-png.flaticon.com/512/5968/5968678.png">
@@ -387,26 +416,19 @@ OFICIAL
 <h3>80 Robux</h3>
 
 <div class="plan">
-Pacote oficial Microsoft/Xbox
+Pacote oficial
 </div>
 
 <div class="price">
 R$4
 </div>
 
-<button>
-Comprar Agora
-</button>
+<button>Comprar</button>
 
 </div>
-
-<!-- ROBUX 400 -->
 
 <div class="card">
-
-<div class="plan-badge">
-OFICIAL
-</div>
+<div class="plan-badge">OFICIAL</div>
 
 <div class="product-logo">
 <img src="https://cdn-icons-png.flaticon.com/512/5968/5968678.png">
@@ -415,26 +437,19 @@ OFICIAL
 <h3>400 Robux</h3>
 
 <div class="plan">
-Entrega rápida e segura
+Entrega rápida
 </div>
 
 <div class="price">
 R$18
 </div>
 
-<button>
-Comprar Agora
-</button>
+<button>Comprar</button>
 
 </div>
-
-<!-- ROBUX 800 -->
 
 <div class="card">
-
-<div class="plan-badge">
-OFICIAL
-</div>
+<div class="plan-badge">OFICIAL</div>
 
 <div class="product-logo">
 <img src="https://cdn-icons-png.flaticon.com/512/5968/5968678.png">
@@ -443,26 +458,19 @@ OFICIAL
 <h3>800 Robux</h3>
 
 <div class="plan">
-Resgate oficial Microsoft/Xbox
+Resgate oficial
 </div>
 
 <div class="price">
 R$35
 </div>
 
-<button>
-Comprar Agora
-</button>
+<button>Comprar</button>
 
 </div>
-
-<!-- YOUTUBE -->
 
 <div class="card">
-
-<div class="plan-badge">
-PREMIUM
-</div>
+<div class="plan-badge">PREMIUM</div>
 
 <div class="product-logo">
 <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
@@ -471,26 +479,19 @@ PREMIUM
 <h3>YouTube Premium</h3>
 
 <div class="plan">
-Plano de 2 meses
+2 meses
 </div>
 
 <div class="price">
 R$15
 </div>
 
-<button>
-Comprar Agora
-</button>
+<button>Comprar</button>
 
 </div>
-
-<!-- YOUTUBE 3M -->
 
 <div class="card">
-
-<div class="plan-badge">
-PREMIUM
-</div>
+<div class="plan-badge">PREMIUM</div>
 
 <div class="product-logo">
 <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
@@ -499,26 +500,19 @@ PREMIUM
 <h3>YouTube Premium</h3>
 
 <div class="plan">
-Plano de 3 meses
+3 meses
 </div>
 
 <div class="price">
 R$20
 </div>
 
-<button>
-Comprar Agora
-</button>
+<button>Comprar</button>
 
 </div>
-
-<!-- SPOTIFY -->
 
 <div class="card">
-
-<div class="plan-badge">
-PREMIUM
-</div>
+<div class="plan-badge">PREMIUM</div>
 
 <div class="product-logo">
 <img src="https://cdn-icons-png.flaticon.com/512/174/174872.png">
@@ -527,26 +521,19 @@ PREMIUM
 <h3>Spotify Premium</h3>
 
 <div class="plan">
-Plano de 1 mês
+1 mês
 </div>
 
 <div class="price">
 R$8
 </div>
 
-<button>
-Comprar Agora
-</button>
+<button>Comprar</button>
 
 </div>
-
-<!-- SPOTIFY 3M -->
 
 <div class="card">
-
-<div class="plan-badge">
-PREMIUM
-</div>
+<div class="plan-badge">PREMIUM</div>
 
 <div class="product-logo">
 <img src="https://cdn-icons-png.flaticon.com/512/174/174872.png">
@@ -555,16 +542,76 @@ PREMIUM
 <h3>Spotify Premium</h3>
 
 <div class="plan">
-Plano de 3 meses
+3 meses
 </div>
 
 <div class="price">
 R$18
 </div>
 
+<button>Comprar</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="auth-section" id="login">
+
+<div class="auth-box">
+
+<h2>Login / Registro</h2>
+
+<input type="text" placeholder="Nome de usuário">
+
+<input type="email" placeholder="Seu Gmail">
+
+<input type="password" placeholder="Sua senha">
+
 <button>
-Comprar Agora
+Entrar / Registrar
 </button>
+
+</div>
+
+</section>
+
+<section class="feedbacks" id="feedbacks">
+
+<div class="section-title">
+<h2>Feedbacks</h2>
+</div>
+
+<div class="feedback-grid">
+
+<div class="feedback-card">
+
+<h3>Lucas</h3>
+
+<p>
+Recebi meu YouTube Premium muito rápido, suporte respondeu na hora.
+</p>
+
+</div>
+
+<div class="feedback-card">
+
+<h3>Pedro</h3>
+
+<p>
+Comprei Robux e caiu certinho, loja muito boa.
+</p>
+
+</div>
+
+<div class="feedback-card">
+
+<h3>Ana</h3>
+
+<p>
+Spotify Premium funcionando perfeitamente, recomendo demais.
+</p>
 
 </div>
 
