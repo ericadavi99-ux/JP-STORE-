@@ -189,21 +189,6 @@ border:1px solid rgba(255,255,255,.06);
 color:white;
 }
 
-.info{
-padding:0 8% 90px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.info-card{
-background:#111;
-padding:30px;
-border-radius:24px;
-border:1px solid rgba(255,255,255,.05);
-text-align:center;
-}
-
 .products{
 padding:100px 8%;
 }
@@ -233,7 +218,7 @@ gap:30px;
 
 .card{
 background:linear-gradient(180deg,#111,#0a0a0a);
-padding:20px;
+padding:25px;
 border-radius:28px;
 border:1px solid rgba(255,255,255,.05);
 transition:.3s;
@@ -245,14 +230,38 @@ transform:translateY(-8px);
 border-color:#7c3aed;
 }
 
-.product-banner{
-width:100%;
-height:180px;
-object-fit:cover;
-border-radius:20px;
-background:white;
-padding:20px;
-margin-bottom:22px;
+.brand-top{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:20px;
+}
+
+.brand-top img{
+height:22px;
+object-fit:contain;
+}
+
+.brand-top span{
+background:#16a34a;
+padding:6px 12px;
+border-radius:999px;
+font-size:12px;
+font-weight:700;
+}
+
+.product-center{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:25px 0;
+}
+
+.icon-product{
+width:90px;
+height:90px;
+object-fit:contain;
+filter:drop-shadow(0 0 20px rgba(255,255,255,.12));
 }
 
 .card h3{
@@ -334,16 +343,10 @@ border-radius:16px;
 gap:10px;
 }
 
-.cart-item p{
-margin-top:5px;
-color:#c084fc;
-}
-
 .cart-controls{
 display:flex;
 align-items:center;
 gap:10px;
-flex-wrap:wrap;
 }
 
 .plus-btn,
@@ -376,13 +379,6 @@ color:white;
 cursor:pointer;
 }
 
-.qty{
-font-weight:700;
-font-size:18px;
-min-width:20px;
-text-align:center;
-}
-
 .cart-total{
 margin-top:25px;
 font-size:24px;
@@ -395,6 +391,36 @@ background:#090909;
 padding:18px;
 border-radius:14px;
 word-break:break-all;
+text-align:center;
+}
+
+.qr-area{
+margin-top:25px;
+background:#090909;
+border-radius:22px;
+padding:25px;
+text-align:center;
+border:1px solid rgba(255,255,255,.05);
+}
+
+.qr-area h3{
+margin-bottom:20px;
+font-size:22px;
+}
+
+.pix-qr{
+width:260px;
+max-width:100%;
+border-radius:18px;
+background:white;
+padding:12px;
+box-shadow:0 0 30px rgba(168,85,247,.25);
+}
+
+.qr-area p{
+margin-top:15px;
+color:#bdbdbd;
+font-size:15px;
 }
 
 .copy-btn,
@@ -451,16 +477,8 @@ color:#777;
 
 @media(max-width:900px){
 
-.topbar{
-flex-direction:column;
-}
-
 .hero h2{
 font-size:52px;
-}
-
-.menu{
-justify-content:center;
 }
 
 .section-title h2{
@@ -491,7 +509,7 @@ font-size:18px;
 
 <img src="./logo.png" alt="JP STORE">
 
-<h1>. JP STORE</h1>
+<h1>JP STORE</h1>
 
 </div>
 
@@ -519,12 +537,12 @@ Entrar no Discord
 <div class="hero-content">
 
 <div class="badge">
-🚀 LOJA EM CRESCIMENTO
+🚀 LOJA OFICIAL
 </div>
 
 <h2>
-A melhor loja de
-<span>assinaturas digitais</span>
+Assinaturas digitais
+<span>oficiais</span>
 </h2>
 
 <p>
@@ -554,14 +572,21 @@ Abrir Discord
 </div>
 
 <h2 class="category-title" style="color:#c084fc;">
-💎 Robux
+💎 Robux Oficial
 </h2>
 
 <div class="products-grid">
 
 <div class="card">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg" class="product-banner">
+<div class="brand-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg">
+<span>OFICIAL</span>
+</div>
+
+<div class="product-center">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968678.png" class="icon-product">
+</div>
 
 <h3>80 Robux</h3>
 
@@ -577,7 +602,14 @@ Adicionar
 
 <div class="card">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg" class="product-banner">
+<div class="brand-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg">
+<span>OFICIAL</span>
+</div>
+
+<div class="product-center">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968678.png" class="icon-product">
+</div>
 
 <h3>400 Robux</h3>
 
@@ -593,7 +625,14 @@ Adicionar
 
 <div class="card">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg" class="product-banner">
+<div class="brand-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg">
+<span>OFICIAL</span>
+</div>
+
+<div class="product-center">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968678.png" class="icon-product">
+</div>
 
 <h3>800 Robux</h3>
 
@@ -610,20 +649,27 @@ Adicionar
 </div>
 
 <h2 class="category-title" style="color:#ff4d4d;">
-▶️ YouTube Premium
+▶️ YouTube Premium Oficial
 </h2>
 
 <div class="products-grid">
 
 <div class="card">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" class="product-banner">
+<div class="brand-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
+<span>OFICIAL</span>
+</div>
+
+<div class="product-center">
+<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" class="icon-product">
+</div>
 
 <h3>2 Meses</h3>
 
 <div class="price">R$15</div>
 
-<p>Premium completo sem anúncios.</p>
+<p>Premium sem anúncios.</p>
 
 <button onclick="addToCart('YouTube Premium 2 Meses','R$15')">
 Adicionar
@@ -633,7 +679,14 @@ Adicionar
 
 <div class="card">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" class="product-banner">
+<div class="brand-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
+<span>OFICIAL</span>
+</div>
+
+<div class="product-center">
+<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" class="icon-product">
+</div>
 
 <h3>3 Meses</h3>
 
@@ -650,14 +703,21 @@ Adicionar
 </div>
 
 <h2 class="category-title" style="color:#1ed760;">
-🎵 Spotify Premium
+🎵 Spotify Premium Oficial
 </h2>
 
 <div class="products-grid">
 
 <div class="card">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" class="product-banner">
+<div class="brand-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg">
+<span>OFICIAL</span>
+</div>
+
+<div class="product-center">
+<img src="https://cdn-icons-png.flaticon.com/512/174/174872.png" class="icon-product">
+</div>
 
 <h3>1 Mês</h3>
 
@@ -673,7 +733,14 @@ Adicionar
 
 <div class="card">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" class="product-banner">
+<div class="brand-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg">
+<span>OFICIAL</span>
+</div>
+
+<div class="product-center">
+<img src="https://cdn-icons-png.flaticon.com/512/174/174872.png" class="icon-product">
+</div>
 
 <h3>3 Meses</h3>
 
@@ -716,6 +783,23 @@ R$0
 PIX: 24 98161-3211
 </div>
 
+<div class="qr-area">
+
+<h3>
+Escaneie o QR Code
+</h3>
+
+<img
+src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=24981613211"
+class="pix-qr"
+>
+
+<p>
+Pagamento via PIX
+</p>
+
+</div>
+
 <button class="copy-btn" onclick="copyPix()">
 Copiar PIX
 </button>
@@ -737,7 +821,7 @@ Toast
 </div>
 
 <footer>
-© 2026 . JP STORE
+© 2026 JP STORE
 </footer>
 
 <script>
@@ -746,6 +830,21 @@ const WEBHOOK_URL =
 'https://discord.com/api/webhooks/1508879892794839172/3fDurhoASNgcNnqk0KmQDInJ1KUZIDtg1WGwOgXLxnit-C0MUpl3y7UNs3_XwUaS3vme';
 
 let cart = [];
+
+function showToast(message){
+
+const toast =
+document.getElementById('toast');
+
+toast.innerHTML = message;
+
+toast.classList.add('show');
+
+setTimeout(()=>{
+toast.classList.remove('show');
+},3000);
+
+}
 
 async function sendLog(title,description,color){
 
@@ -759,14 +858,10 @@ headers:{
 
 body:JSON.stringify({
 
-embeds:[
-
-{
+embeds:[{
 
 title:title,
-
 description:description,
-
 color:color,
 
 footer:{
@@ -775,25 +870,13 @@ text:'JP STORE Logs'
 
 timestamp:new Date()
 
-}
-
-]
+}]
 
 })
 
 });
 
 }
-
-window.onload = () => {
-
-sendLog(
-'🟢 Site Aberto',
-'Novo usuário entrou no site.',
-5763719
-);
-
-};
 
 function addToCart(product,price){
 
@@ -804,15 +887,7 @@ price
 
 updateCart();
 
-showToast(
-`🛒 ${product} adicionado`
-);
-
-sendLog(
-'🛒 Produto Adicionado',
-`${product} | ${price}`,
-3447003
-);
+showToast(`🛒 ${product} adicionado`);
 
 }
 
@@ -822,9 +897,7 @@ cart.splice(index,1);
 
 updateCart();
 
-showToast(
-'❌ Produto removido'
-);
+showToast('❌ Produto removido');
 
 }
 
@@ -837,9 +910,7 @@ price
 
 updateCart();
 
-showToast(
-'➕ Quantidade aumentada'
-);
+showToast('➕ Quantidade aumentada');
 
 }
 
@@ -849,9 +920,7 @@ cart.splice(index,1);
 
 updateCart();
 
-showToast(
-'➖ Quantidade diminuída'
-);
+showToast('➖ Quantidade diminuída');
 
 }
 
@@ -870,9 +939,7 @@ let total = 0;
 cart.forEach((item,index)=>{
 
 const numericPrice =
-parseFloat(
-item.price.replace('R$','')
-);
+parseFloat(item.price.replace('R$',''));
 
 total += numericPrice;
 
@@ -880,10 +947,9 @@ cartItems.innerHTML += `
 
 <div class="cart-item">
 
-<div class="cart-info">
+<div>
 
 <h4>${item.product}</h4>
-
 <p>${item.price}</p>
 
 </div>
@@ -894,10 +960,6 @@ cartItems.innerHTML += `
 onclick="decreaseQuantity(${index})">
 -
 </button>
-
-<span class="qty">
-1
-</span>
 
 <button class="plus-btn"
 onclick="increaseQuantity('${item.product}','${item.price}')">
@@ -944,15 +1006,7 @@ navigator.clipboard.writeText(
 '24 98161-3211'
 );
 
-showToast(
-'✅ PIX copiado'
-);
-
-sendLog(
-'💸 PIX Copiado',
-'Usuário copiou o PIX.',
-3066993
-);
+showToast('✅ PIX copiado');
 
 }
 
@@ -960,10 +1014,7 @@ function finishPurchase(){
 
 if(cart.length <= 0){
 
-showToast(
-'⚠️ Carrinho vazio'
-);
-
+showToast('⚠️ Carrinho vazio');
 return;
 
 }
@@ -982,9 +1033,7 @@ document.getElementById(
 'cartTotal'
 ).innerText;
 
-showToast(
-'🚀 Pedido enviado'
-);
+showToast('🚀 Pedido enviado');
 
 sendLog(
 
@@ -1008,23 +1057,6 @@ window.open(
 );
 
 },1200);
-
-}
-
-function showToast(message){
-
-const toast =
-document.getElementById('toast');
-
-toast.innerHTML = message;
-
-toast.classList.add('show');
-
-setTimeout(()=>{
-
-toast.classList.remove('show');
-
-},3000);
 
 }
 
