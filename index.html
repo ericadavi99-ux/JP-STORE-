@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0,
+maximum-scale=1.0,
+user-scalable=no">
+
+<title>Login - JP STORE</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+-webkit-tap-highlight-color:transparent;
+}
+
+html,
+body{
+width:100%;
+height:100%;
+overflow:hidden;
+touch-action:none;
+}
+
+body{
+background:
+linear-gradient(
+135deg,
+#050505,
+#0b0714
+);
+display:flex;
+justify-content:center;
+align-items:center;
+position:fixed;
+inset:0;
+padding:18px;
+}
+
+/* FUNDO */
+
+.bg{
+position:absolute;
+width:500px;
+height:500px;
+background:#7c3aed;
+filter:blur(180px);
+opacity:.15;
+border-radius:50%;
+top:-120px;
+right:-120px;
+pointer-events:none;
+}
+
+/* CARD */
+
+.container{
+position:relative;
+width:100%;
+max-width:430px;
+background:rgba(15,15,15,.96);
+backdrop-filter:blur(15px);
+padding:35px;
+border-radius:32px;
+border:1px solid rgba(255,255,255,.06);
+box-shadow:
+0 0 40px rgba(147,51,234,.15);
+z-index:2;
+overflow:hidden;
+}
+
+/* LOGO */
+
+.logo{
+display:flex;
+flex-direction:column;
+align-items:center;
+margin-bottom:28px;
+}
+
+.logo img{
+width:105px;
+height:105px;
+border-radius:28px;
+object-fit:cover;
+margin-bottom:14px;
+box-shadow:
+0 0 30px rgba(147,51,234,.35);
+}
+
+.logo h1{
+font-size:42px;
+font-weight:800;
+color:white;
+}
+
+/* TEXTO */
+
+.title{
+text-align:center;
+margin-bottom:28px;
+}
+
+.title h2{
+font-size:30px;
+margin-bottom:10px;
+color:white;
+}
+
+.title p{
+font-size:15px;
+color:#999;
+line-height:1.7;
+}
+
+/* INPUT */
+
+.input-box{
+margin-bottom:18px;
+}
+
+.input-box input{
+width:100%;
+padding:18px;
+border:none;
+outline:none;
+border-radius:18px;
+background:#111;
+color:white;
+font-size:16px;
+border:1px solid transparent;
+transition:.25s;
+}
+
+.input-box input:focus{
+border:1px solid #9333ea;
+box-shadow:
+0 0 15px rgba(147,51,234,.25);
+}
+
+/* SALVAR LOGIN */
+
+.remember{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:22px;
+color:#aaa;
+font-size:14px;
+}
+
+.remember input{
+width:18px;
+height:18px;
+accent-color:#9333ea;
+}
+
+/* BOTÃO */
+
+.login-btn{
+width:100%;
+padding:18px;
+border:none;
+border-radius:20px;
+background:
+linear-gradient(
+90deg,
+#7c3aed,
+#9333ea
+);
+color:white;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+transition:.25s;
+}
+
+.login-btn:hover{
+transform:translateY(-2px);
+box-shadow:
+0 0 25px rgba(147,51,234,.35);
+}
+
+/* BUG */
+
+.bug-report{
+margin-top:20px;
+text-align:center;
+font-size:13px;
+line-height:1.8;
+color:#777;
+}
+
+.bug-report span{
+color:#a855f7;
+font-weight:600;
+word-break:break-word;
+}
+
+/* FOOTER */
+
+.secure{
+margin-top:18px;
+text-align:center;
+font-size:12px;
+color:#666;
+line-height:1.8;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.container{
+padding:28px;
+max-width:390px;
+}
+
+.logo img{
+width:90px;
+height:90px;
+}
+
+.logo h1{
+font-size:34px;
+}
+
+.title h2{
+font-size:26px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="container">
+
+<!-- LOGO -->
+
+<div class="logo">
+
+<img src="logo.png">
+
+<h1>JP STORE</h1>
+
+</div>
+
+<!-- TEXTO -->
+
+<div class="title">
+
+<h2>
+Bem-vindo
+</h2>
+
+<p>
+Entre na plataforma para continuar.
+</p>
+
+</div>
+
+<!-- EMAIL -->
+
+<div class="input-box">
+
+<input
+type="email"
+id="email"
+placeholder="Digite seu Gmail"
+>
+
+</div>
+
+<!-- SENHA -->
+
+<div class="input-box">
+
+<input
+type="password"
+id="password"
+placeholder="Digite sua senha"
+>
+
+</div>
+
+<!-- SALVAR -->
+
+<div class="remember">
+
+<input type="checkbox" id="remember">
+
+<label for="remember">
+Salvar login neste dispositivo
+</label>
+
+</div>
+
+<!-- BOTÃO -->
+
+<button class="login-btn" onclick="login()">
+Entrar
+</button>
+
+<!-- BUG -->
+
+<div class="bug-report">
+
+Encontrou algum bug ou falha?
+
+<br>
+
+<span>
+torresnovasedocaralho244@gmail.com
+</span>
+
+</div>
+
+<!-- SEGURANÇA -->
+
+<div class="secure">
+
+🔒 Plataforma protegida • Login seguro
+
+</div>
+
+</div>
+
+<script>
+
+/* BLOQUEIOS */
+
+document.addEventListener(
+'contextmenu',
+e => e.preventDefault()
+)
+
+document.addEventListener(
+'gesturestart',
+e => e.preventDefault()
+)
+
+document.addEventListener(
+'touchmove',
+function(e){
+e.preventDefault()
+},
+{ passive:false }
+)
+
+document.addEventListener(
+'keydown',
+function(e){
+
+if(e.key === 'F12'){
+e.preventDefault()
+}
+
+if(e.ctrlKey && e.shiftKey && e.key === 'I'){
+e.preventDefault()
+}
+
+if(e.ctrlKey && e.key === 'u'){
+e.preventDefault()
+}
+
+})
+
+/* LOGIN */
+
+function login(){
+
+const email =
+document.getElementById('email')
+.value
+.trim()
+
+const password =
+document.getElementById('password')
+.value
+.trim()
+
+const remember =
+document.getElementById('remember')
+.checked
+
+if(email === '' || password === ''){
+
+alert('Preencha todos os campos')
+
+return
+
+}
+
+if(!email.includes('@gmail.com')){
+
+alert('Digite um Gmail válido')
+
+return
+
+}
+
+if(password.length < 4){
+
+alert('Senha muito curta')
+
+return
+
+}
+
+const btn =
+document.querySelector('.login-btn')
+
+btn.innerHTML='Entrando...'
+
+btn.disabled=true
+
+if(remember){
+
+localStorage.setItem(
+'savedEmail',
+email
+)
+
+localStorage.setItem(
+'savedPassword',
+password
+)
+
+}
+
+setTimeout(()=>{
+
+window.location.href='home.html'
+
+},1400)
+
+}
+
+/* AUTO LOGIN */
+
+window.onload = function(){
+
+const savedEmail =
+localStorage.getItem('savedEmail')
+
+const savedPassword =
+localStorage.getItem('savedPassword')
+
+if(savedEmail){
+
+document.getElementById('email').value =
+savedEmail
+
+}
+
+if(savedPassword){
+
+document.getElementById('password').value =
+savedPassword
+
+document.getElementById('remember').checked=true
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
