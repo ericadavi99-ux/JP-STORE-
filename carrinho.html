@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0,
+maximum-scale=1.0,
+user-scalable=no">
+
+<title>Carrinho - JP STORE</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+-webkit-tap-highlight-color:transparent;
+}
+
+body{
+background:#050505;
+color:white;
+padding:22px;
+overflow-x:hidden;
+animation:fade .5s ease;
+}
+
+/* ANIMAÇÃO */
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(10px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* CARRINHO */
+
+.cart{
+max-width:720px;
+margin:auto;
+background:#0b0b0b;
+padding:30px;
+border-radius:35px;
+border:1px solid rgba(255,255,255,.05);
+transition:.35s;
+animation:fade .6s ease;
+}
+
+/* ESCONDIDO */
+
+.cart.hidden{
+display:none;
+}
+
+/* BOTÃO FLUTUANTE */
+
+.open-cart{
+position:fixed;
+bottom:25px;
+right:25px;
+width:78px;
+height:78px;
+border:none;
+border-radius:50%;
+background:
+linear-gradient(
+90deg,
+#7c3aed,
+#9333ea
+);
+color:white;
+font-size:32px;
+font-weight:800;
+cursor:pointer;
+display:none;
+z-index:999;
+box-shadow:
+0 0 25px rgba(147,51,234,.4);
+transition:.25s;
+}
+
+.open-cart:hover{
+transform:scale(1.08);
+}
+
+.open-cart.show{
+display:block;
+animation:fade .3s ease;
+}
+
+/* TÍTULO */
+
+.title{
+text-align:center;
+margin-bottom:30px;
+}
+
+.title h1{
+font-size:42px;
+font-weight:800;
+}
+
+/* ITENS */
+
+.items{
+margin-bottom:25px;
+}
+
+.item{
+background:#090909;
+padding:20px;
+border-radius:24px;
+margin-bottom:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:15px;
+border:1px solid rgba(255,255,255,.04);
+transition:.25s;
+animation:fade .4s ease;
+}
+
+.item:hover{
+transform:scale(1.01);
+border:1px solid rgba(147,51,234,.30);
+}
+
+.item-left{
+display:flex;
+flex-direction:column;
+gap:8px;
+}
+
+.item-name{
+font-size:21px;
+font-weight:700;
+}
+
+.item-price{
+font-size:16px;
+color:#aaa;
+}
+
+.item-robux{
+font-size:16px;
+color:#a855f7;
+font-weight:700;
+}
+
+/* QUANTIDADE */
+
+.quantity-box{
+display:flex;
+align-items:center;
+gap:10px;
+margin-top:12px;
+}
+
+.qty-btn{
+width:42px;
+height:42px;
+border:none;
+border-radius:14px;
+background:#111;
+color:white;
+font-size:22px;
+font-weight:800;
+cursor:pointer;
+transition:.2s;
+}
+
+.qty-btn:hover{
+background:#9333ea;
+transform:scale(1.08);
+}
+
+/* NUMERO */
+
+.qty-number{
+min-width:35px;
+text-align:center;
+font-size:18px;
+font-weight:700;
+}
+
+/* REMOVER */
+
+.remove-btn{
+border:none;
+padding:13px 18px;
+border-radius:16px;
+background:#181818;
+color:white;
+font-weight:700;
+cursor:pointer;
+transition:.2s;
+}
+
+.remove-btn:hover{
+background:#9333ea;
+}
+
+/* TOTAL */
+
+.total-box{
+margin-top:30px;
+background:#090909;
+padding:25px;
+border-radius:28px;
+}
+
+.total-box h2{
+font-size:32px;
+margin-bottom:20px;
+}
+
+.total-info{
+font-size:20px;
+line-height:2;
+color:#ddd;
+}
+
+.total-info span{
+color:#a855f7;
+font-weight:800;
+}
+
+/* CUPOM */
+
+.coupon-box{
+margin-top:25px;
+background:#090909;
+padding:22px;
+border-radius:24px;
+}
+
+.coupon-title{
+font-size:22px;
+font-weight:800;
+margin-bottom:15px;
+}
+
+.coupon-input{
+width:100%;
+padding:18px;
+border:none;
+outline:none;
+border-radius:18px;
+background:#111;
+color:white;
+font-size:16px;
+}
+
+/* BOTÕES */
+
+.checkout-btn,
+.save-btn{
+width:100%;
+padding:20px;
+border:none;
+border-radius:22px;
+color:white;
+font-size:20px;
+font-weight:800;
+cursor:pointer;
+transition:.25s;
+}
+
+.checkout-btn{
+margin-top:25px;
+background:
+linear-gradient(
+90deg,
+#7c3aed,
+#9333ea
+);
+}
+
+.save-btn{
+margin-top:18px;
+background:
+linear-gradient(
+90deg,
+#2563eb,
+#3b82f6
+);
+}
+
+.checkout-btn:hover,
+.save-btn:hover{
+transform:scale(1.02);
+}
+
+/* TOAST */
+
+.toast{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#9333ea;
+padding:15px 22px;
+border-radius:16px;
+font-weight:700;
+opacity:0;
+pointer-events:none;
+transition:.3s;
+z-index:9999;
+}
+
+.toast.show{
+opacity:1;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.title h1{
+font-size:34px;
+}
+
+.item{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.remove-btn{
+width:100%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- SOM -->
+
+<audio id="clickSound">
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3?filename=click-124467.mp3" type="audio/mpeg">
+</audio>
+
+<!-- BOTÃO ABRIR -->
+
+<button
+class="open-cart"
+id="openCartBtn"
+onclick="openCart()"
+>
+🛒
+</button>
+
+<!-- CARRINHO -->
+
+<div class="cart" id="cart">
+
+<div class="title">
+
+<h1>
+🛒 Carrinho
+</h1>
+
+</div>
+
+<div class="items" id="items">
+</div>
+
+<!-- TOTAL -->
+
+<div class="total-box">
+
+<h2>
+Resumo
+</h2>
+
+<div class="total-info">
+
+Produtos:
+<span id="totalItems">0</span>
+
+<br>
+
+Total:
+<span id="totalPrice">R$0</span>
+
+<br>
+
+Robux:
+<span id="totalRobux">0 Robux</span>
+
+</div>
+
+</div>
+
+<!-- CUPOM -->
+
+<div class="coupon-box">
+
+<div class="coupon-title">
+Cupom
+</div>
+
+<input
+type="text"
+class="coupon-input"
+placeholder="Digite um cupom"
+>
+
+</div>
+
+<!-- BOTÕES -->
+
+<button
+class="checkout-btn"
+onclick="goCheckout()"
+>
+Finalizar Compra
+</button>
+
+<button
+class="save-btn"
+onclick="saveAndMinimize()"
+>
+Salvar e Minimizar Carrinho
+</button>
+
+</div>
+
+<!-- TOAST -->
+
+<div class="toast" id="toast">
+OK
+</div>
+
+<script>
+
+/* =========================
+ANTI BUG
+========================= */
+
+document.addEventListener(
+'contextmenu',
+e => e.preventDefault()
+)
+
+document.addEventListener(
+'keydown',
+function(e){
+
+if(e.key === 'F12'){
+e.preventDefault()
+}
+
+if(e.ctrlKey && e.shiftKey && e.key === 'I'){
+e.preventDefault()
+}
+
+if(e.ctrlKey && e.key === 'u'){
+e.preventDefault()
+}
+
+})
+
+/* =========================
+SOM
+========================= */
+
+function playClick(){
+
+document
+.getElementById('clickSound')
+.play()
+
+}
+
+/* =========================
+CARRINHO
+========================= */
+
+let cart =
+JSON.parse(
+localStorage.getItem('cartItems')
+) || []
+
+const itemsContainer =
+document.getElementById('items')
+
+function renderCart(){
+
+itemsContainer.innerHTML=''
+
+let totalPrice = 0
+let totalRobux = 0
+let totalItems = 0
+
+if(cart.length === 0){
+
+localStorage.removeItem('cartItems')
+
+showToast(
+'Carrinho vazio'
+)
+
+setTimeout(()=>{
+
+window.location.href =
+'produtos.html'
+
+},700)
+
+return
+
+}
+
+cart.forEach((item,index)=>{
+
+if(!item.quantity){
+
+item.quantity = 1
+
+}
+
+totalPrice +=
+Number(item.price) *
+Number(item.quantity)
+
+totalItems +=
+Number(item.quantity)
+
+if(item.robux > 0){
+
+totalRobux +=
+Number(item.robux) *
+Number(item.quantity)
+
+}
+
+itemsContainer.innerHTML += `
+
+<div class="item">
+
+<div class="item-left">
+
+<div class="item-name">
+${item.name}
+</div>
+
+<div class="item-price">
+R$${(
+Number(item.price) *
+Number(item.quantity)
+).toFixed(2)}
+</div>
+
+${
+item.robux > 0
+?
+
+`<div class="item-robux">
+${item.robux * item.quantity} Robux
+</div>`
+
+:
+
+''
+
+}
+
+<div class="quantity-box">
+
+<button
+class="qty-btn"
+onclick="decreaseQty(${index})"
+>
+-
+</button>
+
+<div class="qty-number">
+${item.quantity}
+</div>
+
+<button
+class="qty-btn"
+onclick="increaseQty(${index})"
+>
++
+</button>
+
+</div>
+
+</div>
+
+<button
+class="remove-btn"
+onclick="removeItem(${index})"
+>
+Remover
+</button>
+
+</div>
+
+`
+
+})
+
+document.getElementById('totalItems')
+.innerHTML =
+totalItems
+
+document.getElementById('totalPrice')
+.innerHTML =
+'R$' + totalPrice.toFixed(2)
+
+document.getElementById('totalRobux')
+.innerHTML =
+totalRobux + ' Robux'
+
+localStorage.setItem(
+'cartTotal',
+totalPrice.toFixed(2)
+)
+
+localStorage.setItem(
+'cartItems',
+JSON.stringify(cart)
+)
+
+}
+
+/* =========================
++
+========================= */
+
+function increaseQty(index){
+
+playClick()
+
+cart[index].quantity++
+
+renderCart()
+
+}
+
+/* =========================
+-
+========================= */
+
+function decreaseQty(index){
+
+playClick()
+
+if(cart[index].quantity > 1){
+
+cart[index].quantity--
+
+}else{
+
+cart.splice(index,1)
+
+}
+
+if(cart.length === 0){
+
+localStorage.removeItem('cartItems')
+
+showToast(
+'Carrinho vazio'
+)
+
+setTimeout(()=>{
+
+window.location.href =
+'produtos.html'
+
+},700)
+
+return
+
+}
+
+renderCart()
+
+}
+
+/* =========================
+REMOVER
+========================= */
+
+function removeItem(index){
+
+playClick()
+
+cart.splice(index,1)
+
+if(cart.length === 0){
+
+localStorage.removeItem('cartItems')
+
+showToast(
+'Carrinho vazio'
+)
+
+setTimeout(()=>{
+
+window.location.href =
+'produtos.html'
+
+},700)
+
+return
+
+}
+
+renderCart()
+
+}
+
+/* =========================
+CHECKOUT
+========================= */
+
+function goCheckout(){
+
+playClick()
+
+setTimeout(()=>{
+
+window.location.href =
+'checkout.html'
+
+},200)
+
+}
+
+/* =========================
+SALVAR + FECHAR
+========================= */
+
+function saveAndMinimize(){
+
+playClick()
+
+localStorage.setItem(
+'cartSaved',
+'true'
+)
+
+document
+.getElementById('cart')
+.classList.add('hidden')
+
+document
+.getElementById('openCartBtn')
+.classList.add('show')
+
+showToast(
+'Carrinho salvo'
+)
+
+/* VOLTA PRA PRODUTOS */
+
+setTimeout(()=>{
+
+window.location.href =
+'produtos.html'
+
+},900)
+
+}
+
+/* =========================
+ABRIR CARRINHO
+========================= */
+
+function openCart(){
+
+playClick()
+
+window.location.href =
+'carrinho.html'
+
+}
+
+/* =========================
+TOAST
+========================= */
+
+function showToast(text){
+
+const toast =
+document.getElementById('toast')
+
+toast.innerText = text
+
+toast.classList.add('show')
+
+setTimeout(()=>{
+
+toast.classList.remove('show')
+
+},2000)
+
+}
+
+/* =========================
+BOTÃO FLUTUANTE
+========================= */
+
+if(localStorage.getItem('cartSaved')){
+
+document
+.getElementById('openCartBtn')
+.classList.add('show')
+
+}
+
+/* =========================
+INICIAR
+========================= */
+
+renderCart()
+
+</script>
+
+</body>
+</html>
